@@ -8,3 +8,10 @@ nav a {
     display: black;
     padding: 20px;
 }
+main img {
+    width: 200px;
+    height: auto;
+
+}
+
+p {padding: 0;}
