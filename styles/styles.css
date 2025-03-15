@@ -8,10 +8,32 @@ nav a {
     display: black;
     padding: 20px;
 }
-main img {
+
+nav a {
+    width: 200px;
+    margin: 20px auto;
+    border: 2px solid darkblue;
+    padding: 15px;
+    background-color: lightgray; 
+    ;
+    color: darkblue;
+}
+
+img {
     width: 200px;
     height: auto;
 
 }
 
 p {padding: 0;}
+
+ footer{
+    margin-top: 20px;
+    border-top: 2px solid darkblue;
+    text-align: center;
+    padding: 10px;
+    background-color: lightgray; 
+ }
+    
+   
+
