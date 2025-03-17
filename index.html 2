@@ -3,9 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Joyce Achen's personal webpage for WDD 130, showcasing web development skills and projects.">
-    <meta name="author" content="Joyce Achen">
-    <title>Joyce Achen | WDD 130</title>
+    <title>Joyce Achen| WDD 130</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
@@ -23,13 +21,6 @@
         <img src="images/profile.jpg" alt="Profile image of Joyce Achen" width="200">
         <p>Hello! My name is Joyce Achen, and I am a student in WDD 130. I am passionate about web development and excited to learn more about HTML and CSS.</p>
     </main>
-
-    <!-- Aside Section -->
-    <aside>
-        <h2>Uganda</h2>
-        <img src="images/uganda.jpg" alt="Beautiful view of Uganda" width="200">
-        <p>Uganda, known as the Pearl of Africa, is famous for its diverse wildlife, stunning landscapes, and vibrant culture. It is home to the source of the Nile and offers breathtaking natural beauty.</p>
-    </aside>
 
     <footer>
         <p>© 2025 Joyce Achen, Uganda</p>
