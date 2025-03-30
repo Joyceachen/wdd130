@@ -1,0 +1,123 @@
+/* Define CSS Variables */
+:root {
+    --primary-color: #031d44;
+    --secondary-color: #04395e;
+    --accent1-color: #70a288;
+    --accent2-color: #dab785;
+    --head-font: 'Roboto';
+    --text-font: 'Lato';
+}
+
+/* General Styles */
+body {
+    margin: 0 auto;
+    max-width: 1200px; /* Limit page width */
+    font-family: var(--text-font);
+    color: var(--primary-color);
+}
+
+/* Header */
+header {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    text-align: center;
+}
+
+header img {
+    width: 150px;
+}
+
+nav {
+    margin-top: 1rem;
+}
+
+nav a {
+    color: var(--accent2-color);
+    margin: 0 1rem;
+    text-decoration: none;
+    font-family: var(--head-font);
+    font-weight: 700;
+}
+
+/* Main */
+main {
+    padding: 1rem;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    display: block;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: var(--accent2-color);
+    font-family: var(--head-font);
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero article {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
+    max-width: 500px;
+}
+
+.hero article img {
+    width: 100px;
+    float: right;
+    margin-left: 1rem;
+}
+
+.hero article p {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+/* Sections */
+section {
+    margin: 2rem 0;
+}
+
+h2 {
+    font-family: var(--head-font);
+    font-weight: 700;
+    color: var(--accent1-color);
+}
+
+section img {
+    width: 18%; /* Temporary until layout is styled later */
+    margin: 0.5%;
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--accent2-color);
+    padding: 1rem;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+.social-links a {
+    text-decoration: none;
+}
+
+.social-links img {
+    width: 30px;
+    margin: 0 0.5rem;
+}
