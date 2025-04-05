@@ -1,4 +1,4 @@
-/* Define CSS Variables */
+ 
 :root {
     --primary-color: #031d44;
     --secondary-color: #04395e;
@@ -8,109 +8,211 @@
     --text-font: 'Lato', sans-serif;
 }
 
-/* General Styles */
+
 body {
     margin: 0 auto;
-    max-width: 1200px; /* Limit page width */
+    max-width: 1200px;
     font-family: var(--text-font);
     color: var(--primary-color);
 }
 
-/* Header */
+
 header {
     background-color: var(--secondary-color);
     padding: 1rem;
-    text-align: center;
 }
 
-header img {
-    width: 150px;
+.header-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 1rem;
 }
 
-nav {
-    margin-top: 1rem;
+header img.logo {
+    width: 100px;
 }
 
-nav a {
-    color: var(--accent2-color);
+.nav-bar ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar li {
     margin: 0 1rem;
+}
+
+.nav-bar a {
+    color: var(--accent2-color);
     text-decoration: none;
     font-family: var(--head-font);
     font-weight: 700;
 }
 
-/* Main */
+ 
 main {
     padding: 1rem;
 }
 
-/* Hero Section */
+ 
 .hero {
     position: relative;
+    background-image: url('../images/hero.jpg');  
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    margin-bottom: 2rem;
 }
 
-.hero img {
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    display: block;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);  
 }
 
 .hero h1 {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    color: var(--accent2-color);
     font-family: var(--head-font);
     font-weight: 700;
+    color: var(--accent2-color);
     font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    position: relative; 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.hero article {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 1rem;
-    max-width: 500px;
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    position: relative;  
 }
 
-.hero article img {
-    width: 100px;
-    float: right;
-    margin-left: 1rem;
-}
-
-.hero article p {
+.hero-content p {
+    flex: 1;
     margin: 0;
-    color: var(--primary-color);
+    color: #fff;  
+    background-color: rgba(0, 0, 0, 0.5);  
+    padding: 1rem;
 }
 
-/* Sections */
-section {
+.hero-content img {
+    width: 140px;  
+    height: auto;
+}
+
+ /* History Section */
+.history {
     margin: 2rem 0;
 }
 
-h2 {
+.history h2 {
     font-family: var(--head-font);
     font-weight: 700;
     color: var(--accent1-color);
+    text-align: center;
 }
 
-section img {
-    width: 18%; /* Temporary until layout is styled later */
-    margin: 0.5%;
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;  
+    gap: 2rem;
+    align-items: center;
 }
 
-/* Footer */
+.history-text-left,
+.history-text-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;  
+}
+
+.history-text-left p,
+.history-text-right p {
+    margin: 0;
+}
+
+.history-image {
+    width: 100%;
+    height: auto;
+    max-width: 200px;  
+    margin: 0 auto;  
+    display: block;
+}
+ 
+.adventures {
+    margin: 2rem 0;
+}
+
+.adventures h2 {
+    font-family: var(--head-font);
+    font-weight: 700;
+    color: var(--accent1-color);
+    text-align: center;
+}
+
+.adventure-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.adventure-gallery figure {
+    flex: 1;
+    margin: 0;
+    text-align: center;
+}
+
+.adventure-gallery img {
+    width: 100%;
+    height: auto;
+}
+
+.adventure-gallery figcaption {
+    font-family: var(--text-font);
+    color: var(--primary-color);
+    margin-top: 0.5rem;
+}
+ 
 footer {
     background-color: var(--secondary-color);
     color: var(--accent2-color);
     padding: 1rem;
+}
+
+.footer-content {
+    display: flex;
+   
+    align-items: center;
+    position: relative;
+    justify-content: flex-end;
+}
+.footer-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
     text-align: center;
 }
 
-footer p {
+.footer-content p {
     margin: 0;
+    text-align: center;
+}
+.social-links {
+    display: flex;
+    gap: 1rem;
 }
 
 .social-links a {
@@ -119,5 +221,4 @@ footer p {
 
 .social-links img {
     width: 30px;
-    margin: 0 0.5rem;
 }
