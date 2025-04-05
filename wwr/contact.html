@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn about Whitewater Rafting, our history, and the thrilling adventures we offer. Book your rafting trip today!">
+    <meta name="description" content="Contact Whitewater Rafting for inquiries, reservations, and more. Get in touch with us today!">
     <meta name="author" content="Your Name">
     <title>Contact Us - Whitewater Rafting</title>
     <!-- Google Fonts -->
@@ -13,7 +13,7 @@
 </head>
 <body>
     <header>
-        <div  style="display: flex; justify-content: space-between; align-items: center;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
             <img src="images/logo.jpg" alt="Whitewater Rafting Logo" class="logo" style="width: 100px;">
             <nav class="nav-bar">
                 <a href="index.html">Home</a>
@@ -26,34 +26,58 @@
     <main>
         <div class="hero">
             <img src="images/hero.jpg" alt="Whitewater Rafting Hero Image">
-            <h1>Whitewater Rafting</h1>
-            <article>
-                <img src="images/happyclient.jpeg" alt="Happy Client">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec,
-                    mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed
-                    eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit
-                    amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu
-                    diam.
-                </p>
-            </article>
+            <h1>Contact Whitewater Rafting</h1>
         </div>
-        <section>
-            <h2>History</h2>
-            <p>
-                Founded in 2010, Whitewater Rafting began as a small family business passionate about sharing the thrill of
-                rafting with others. Over the years, we’ve grown into a trusted name, guiding thousands of adventurers down
-                some of the most exciting rivers in the region. Our commitment to safety and fun remains at the core of
-                everything we do.
-            </p>
+        <section class="company-info">
+            <h2>Our Contact Information</h2>
+            <p><strong>Address:</strong> 123 River St, Rapids City, Riverland</p>
+            <p><strong>Phone:</strong> (123) 456-7890</p>
+            <p><strong>Email:</strong> contact@whitewaterrafting.com</p>
         </section>
-        <section>
-            <h2>Adventure Awaits You!</h2>
-            <img src="images/rafting1.jpg" alt="Rafting Adventure 1">
-            <img src="images/rafting2.jpg" alt="Rafting Adventure 2">
-            <img src="images/rafting3.jpg" alt="Rafting Adventure 3">
-            <img src="images/rafting4.jpg" alt="Rafting Adventure 4">
-            <img src="images/rafting5.jpg" alt="Rafting Adventure 5">
+        <section class="google-map">
+            <h2>Find Us</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=..." width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+        <section class="employee-images">
+            <h2>Meet Our Team</h2>
+            <div class="employee-gallery">
+                <figure>
+                    <img src="images/employee1.jpg" alt="Employee 1">
+                    <figcaption>John Doe - Rafting Guide</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/employee2.jpg" alt="Employee 2">
+                    <figcaption>Jane Smith - Customer Service</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/employee3.jpg" alt="Employee 3">
+                    <figcaption>Mike Johnson - Safety Officer</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="#" method="POST">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message-purpose">Message Purpose</label>
+                <div>
+                    <label><input type="radio" name="message-purpose" value="General Inquiry"> General Inquiry</label>
+                    <label><input type="radio" name="message-purpose" value="Reservation Question"> Reservation Question</label>
+                    <label><input type="radio" name="message-purpose" value="Website Suggestion"> Website Suggestion</label>
+                </div>
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <label><input type="checkbox" name="newsletter" value="subscribe"> Please subscribe me to the monthly newsletter</label>
+
+                <button type="submit">Send Message</button>
+            </form>
         </section>
     </main>
     <footer>
@@ -63,6 +87,7 @@
             <a href="https://twitter.com"><img src="images/5279123_tweet_twitter_twitter logo_icon.png" alt="Twitter"></a>
             <a href="https://instagram.com"><img src="images/5279112_camera_instagram_social media_instagram logo_icon.png" alt="Instagram"></a>
         </div>
+        <a href="contact-wireframe.jpg" target="_blank">View Wireframe</a>
     </footer>
 </body>
 </html>
