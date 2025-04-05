@@ -1,160 +1,60 @@
-:root {
-    --primary-color: #031d44;
-    --secondary-color: #04395e;
-    --accent1-color: #70a288;
-    --accent2-color: #dab785;
-    --head-font: 'Roboto', sans-serif;
-    --text-font: 'Lato', sans-serif;
-}
-
-body {
-    margin: 0 auto;
-    max-width: 1200px;
-    font-family: var(--text-font);
-    color: var(--primary-color);
-}
-
-header {
-    background-color: var(--secondary-color);
-    padding: 1rem;
-}
-
-.header-grid {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    gap: 1rem;
-}
-
-header img.logo {
-    width: 100px;
-}
-
-.nav-bar ul {
-    display: flex;
-    justify-content: flex-end;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-bar li {
-    margin: 0 1rem;
-}
-
-.nav-bar a {
-    color: var(--accent2-color);
-    text-decoration: none;
-    font-family: var(--head-font);
-    font-weight: 700;
-}
-
-main {
-    padding: 1rem;
-}
-
-.hero {
-    position: relative;
-    background-image: url('../images/hero.jpg');  
-    background-size: cover;
-    background-position: center;
-    min-height: 400px;  
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 2rem;
-    margin-bottom: 2rem;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);  
-}
-
-.hero h1 {
-    font-family: var(--head-font);
-    font-weight: 700;
-    color: var(--accent2-color);
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 1rem;
-    position: relative; 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.company-info, .google-map, .employee-images, .contact-form {
-    margin: 2rem 0;
-}
-
-h2 {
-    font-family: var(--head-font);
-    font-weight: 700;
-    color: var(--accent1-color);
-    text-align: center;
-}
-
+/* New styles for contact page */
 .employee-gallery {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
+    margin: 2rem 0;
 }
 
 .employee-gallery figure {
     text-align: center;
+    flex: 1;
 }
 
 .employee-gallery img {
     width: 100%;
     height: auto;
-    max-width: 150px;
 }
 
-.contact-form label {
-    display: block;
-    margin: 0.5rem 0 0.25rem;
+.employee-gallery figcaption {
+    margin-top: 0.5rem;
+    font-family: var(--text-font);
+    color: var(--primary-color);
 }
 
-.contact-form input,
-.contact-form textarea {
+form {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form textarea {
     width: 100%;
     padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
 }
 
-.contact-form button {
+form button {
+    padding: 0.8rem;
     background-color: var(--secondary-color);
-    color: #fff;
-    padding: 0.75rem 1.5rem;
+    color: white;
     border: none;
-    cursor: pointer;
+    border-radius: 5px;
     font-size: 1rem;
+    cursor: pointer;
 }
 
-.contact-form button:hover {
+form button:hover {
     background-color: var(--accent1-color);
 }
 
-footer {
-    background-color: var(--secondary-color);
-    color: var(--accent2-color);
-    padding: 1rem;
-}
-
-footer .social-links {
-    display: flex;
-    gap: 1rem;
-}
-
-footer .social-links a {
-    text-decoration: none;
-}
-
-footer .social-links img {
-    width: 30px;
+.google-map {
+    margin-top: 2rem;
+    width: 100%;
+    height: 400px;
 }
