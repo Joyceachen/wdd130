@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin: 2rem 0;
+    margin:  0 auto;
 }
 
 .employee-gallery figure {
@@ -17,7 +17,7 @@
 }
 
 .employee-gallery figcaption {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     font-family: var(--text-font);
     color: var(--primary-color);
 }
@@ -34,7 +34,7 @@ form label {
 
 form input, form textarea {
     width: 100%;
-    padding: 0.5rem;
+    padding: 1rem;
     border: 1px solid var(--secondary-color);
     border-radius: 5px;
 }
@@ -54,7 +54,7 @@ form button:hover {
 }
 
 .google-map {
-    margin-top: 2rem;
+    margin-top: 1rem;
     width: 100%;
     height: 400px;
 }
