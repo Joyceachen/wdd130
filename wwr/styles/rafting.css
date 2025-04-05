@@ -1,7 +1,7 @@
 /* New styles for contact page */
 .employee-gallery {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 1rem;
     margin: 2rem 0;
 }
