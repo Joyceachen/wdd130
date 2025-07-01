@@ -4,8 +4,8 @@
     --secondary-color: #04395e;
     --accent1-color: #70a288;
     --accent2-color: #dab785;
-    --head-font: 'Roboto';
-    --text-font: 'Lato';
+    --head-font: 'Roboto', sans-serif;
+    --text-font: 'Lato', sans-serif;
 }
 
 /* General Styles */
@@ -20,7 +20,7 @@ body {
 header {
     background-color: var(--secondary-color);
     padding: 1rem;
-    text-align: right;
+    text-align: center;
 }
 
 header img {
@@ -34,7 +34,7 @@ nav {
 nav a {
     color: var(--accent2-color);
     margin: 0 1rem;
-    text-decoration: underline;
+    text-decoration: none;
     font-family: var(--head-font);
     font-weight: 700;
 }

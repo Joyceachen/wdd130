@@ -1,0 +1,116 @@
+import csv
+import datetime
+import os
+
+# Function to add a new donation record
+def add_donation(item_name, quantity, donor_name, date):
+    inventory = load_inventory("donations.csv")
+    inventory.append({"item_name": item_name, "quantity": quantity, "donor_name": donor_name, "date": date})
+    save_inventory(inventory, "donations.csv")
+
+# Function to distribute items
+def distribute_item(item_name, quantity, receiver_name, date):
+    inventory = load_inventory("donations.csv")
+    for item in inventory:
+        if item["item_name"] == item_name and item["quantity"] >= quantity:
+            item["quantity"] -= quantity
+            save_inventory(inventory, "donations.csv")
+            return
+    print("Insufficient quantity or item not found.")
+
+# Function to load inventory from CSV file
+def load_inventory(filename):
+    if not os.path.exists(filename):
+        return []
+    with open(filename, "r") as file:
+        reader = csv.DictReader(file)
+        inventory = list(reader)
+    return inventory
+
+# Function to save inventory to CSV file
+def save_inventory(inventory, filename):
+    with open(filename, "w", newline="") as file:
+        fieldnames = ["item_name", "quantity", "donor_name", "date"]
+        writer = csv.DictWriter(file, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(inventory)
+
+# Function to generate a summary report
+def generate_report(inventory):
+    print("Summary Report:")
+    for item in inventory:
+        print(f"Item: {item['item_name']}, Quantity: {item['quantity']}, Donor: {item['donor_name']}, Date: {item['date']}")
+
+# Function to get summary by item
+def get_summary_by_item(inventory):
+    item_summary = {}
+    for item in inventory:
+        if item["item_name"] not in item_summary:
+            item_summary[item["item_name"]] = 0
+        item_summary[item["item_name"]] += int(item["quantity"])
+    return item_summary
+
+# Function to get summary by donor
+def get_summary_by_donor(inventory):
+    donor_summary = {}
+    for item in inventory:
+        if item["donor_name"] not in donor_summary:
+            donor_summary[item["donor_name"]] = 0
+        donor_summary[item["donor_name"]] += int(item["quantity"])
+    return donor_summary
+
+# Function to validate user input
+def validate_input(value, expected_type):
+    if expected_type == "int":
+        try:
+            int(value)
+            return True
+        except ValueError:
+            return False
+    elif expected_type == "str":
+        return isinstance(value, str)
+
+# Main function
+def main():
+    while True:
+        print("1. Add Donation")
+        print("2. Distribute Item")
+        print("3. Generate Report")
+        print("4. Get Summary by Item")
+        print("5. Get Summary by Donor")
+        print("6. Quit")
+        choice = input("Choose an option: ")
+        if choice == "1":
+            item_name = input("Enter item name: ")
+            quantity = input("Enter quantity: ")
+            donor_name = input("Enter donor name: ")
+            date = datetime.date.today().strftime("%Y-%m-%d")
+            add_donation(item_name, quantity, donor_name, date)
+        elif choice == "2":
+            item_name = input("Enter item name: ")
+            quantity = input("Enter quantity: ")
+            receiver_name = input("Enter receiver name: ")
+            date = datetime.date.today().strftime("%Y-%m-%d")
+            distribute_item(item_name, quantity, receiver_name, date)
+        elif choice == "3":
+            inventory = load_inventory("donations.csv")
+            generate_report(inventory)
+        elif choice == "4":
+            inventory = load_inventory("donations.csv")
+            item_summary = get_summary_by_item(inventory)
+            print("Item Summary:")
+            for item, quantity in item_summary.items():
+                print(f"Item: {item}, Quantity: {quantity}")
+        elif choice == "5":
+            inventory = load_inventory("donations.csv")
+            donor_summary = get_summary_by_donor(inventory)
+            print("Donor Summary:")
+            for donor, quantity in donor_summary.items():
+                print(f"Donor: {donor}, Quantity: {quantity}")
+        elif choice == "6":
+            break
+        else:
+            print("Invalid choice. Please choose again.")
+
+if __name__ == "__main__":
+    main()
