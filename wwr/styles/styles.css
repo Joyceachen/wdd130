@@ -53,11 +53,13 @@ aside img {
   height: auto;
 }
 
+/* Footer */
 footer {
   margin-top: 20px;
   border-top: 1px solid #999;
   text-align: center;
 }
+
 footer p {
     color: darkblue;
 }
