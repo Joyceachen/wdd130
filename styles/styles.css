@@ -19,6 +19,7 @@ main img {
   border: 1px solid black;
   padding: 2px;
   box-shadow: 0 0 30px gray;
+ 
 }
 
 p {
@@ -27,11 +28,12 @@ p {
 
 aside {
   width: 300px;
-  margin: 20px auto;
-  border: 1px solid #999;
+  margin: 1rem;
+  border: 1px solid rgb(0 0 0 / 0.2); 
   padding: 10px;
-  background-color: #f5f5f5;
+  background-color: #eee;
   color: #333;
+  text-align: center;
 }
 
 aside h2 {
@@ -53,10 +55,14 @@ aside img {
   height: auto;
 }
 
+p {
+  padding: 0;
+}
+
 footer {
-  margin-top: 20px;
+  margin-top: 15px;
   border-top: 1px solid #999;
-  text-align: center;
+  
 }
 footer p {
     color: darkblue;
