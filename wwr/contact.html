@@ -3,103 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact us for any inquiries, questions, or more information about Whitewater Rafting. Get in touch today!">
-    <meta name="author" content="Your Name">
-    <title>Contact Us - Whitewater Rafting</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles/rafting.css">
+    <meta name="description" content="Contact White Water Rafting - Get in touch for thrilling adventures!">
+    <meta name="author" content="Joyce Achen">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="white water rafting, adventure, contact, booking, river rafting">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Contact Us - White Water Rafting</title>
+    <link rel="stylesheet" href="styles/contact.css">
 </head>
 <body>
+
+    <!-- HEADER -->
     <header>
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-            <img src="images/logo.jpg" alt="Whitewater Rafting Logo" class="logo" style="width: 100px;">
-            <nav class="nav-bar">
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="trips.html">Trips</a>
-                <a href="contact.html">Contact Us</a>
-            </nav>
-        </div>
-    </header>
-    <main>
-        <div class="hero">
-            <img src="images/hero.jpg" alt="Whitewater Rafting Hero Image">
-            <h1>Contact Us</h1>
-        </div>
-        <section>
-            <h2>Company Information</h2>
-            <p>
-                <strong>Address:</strong> 123 Adventure Lane, Rafting City, RC 12345<br>
-                <strong>Phone:</strong> +1 234 567 8900<br>
-                <strong>Email:</strong> <a href="mailto:info@whitewaterrafting.com">info@whitewaterrafting.com</a>
-            </p>
-        </section>
-        <section>
-            <h2>Our Employees</h2>
-            <div class="employee-gallery">
-                <figure>
-                    <img src="images/employee1.jpg" alt="Employee 1">
-                    <figcaption>John Doe - Rafting Guide</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/employee2.jpg" alt="Employee 2">
-                    <figcaption>Jane Smith - Operations Manager</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/employee3.jpg" alt="Employee 3">
-                    <figcaption>Mark Johnson - Safety Officer</figcaption>
-                </figure>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.jpg" alt="Brand Logo">
             </div>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="trips.html" >Trips</a>
+                <a href="about.html" >About Us</a>
+                <a href="contact.html" class="btn">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="images/hero-image.jpg" alt="Exciting white water rafting adventure with splashing rapids">
+            <h2>Contact Us</h2>
         </section>
-        <section>
-            <h2>Contact Form</h2>
-            <form action="submit_form.php" method="POST">
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" required>
 
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" required>
+        <!-- Contact Information -->
+        <section class="contact-info">
+            <h2>Get in Touch</h2>
+            <p><strong>Address:</strong> 123 Jinja, River Gulu, RT 45678</p>
+            <p><strong>Phone:</strong> <a href="tel:+256726929948">+256726929948</a></p>
+            <p><strong>Email:</strong> <a href="megoada:info@rafting.com">info@rafting.com</a></p>
+        </section>
 
-                <label for="message-purpose">Message Purpose:</label>
-                <div>
-                    <input type="radio" id="general-inquiry" name="message-purpose" value="General Inquiry">
-                    <label for="general-inquiry">General Inquiry</label>
-                    <input type="radio" id="reservation" name="message-purpose" value="Reservation Question">
-                    <label for="reservation">Reservation Question</label>
-                    <input type="radio" id="website-suggestion" name="message-purpose" value="Website Suggestion">
-                    <label for="website-suggestion">Website Suggestion</label>
-                </div>
+        <!-- Google Map -->
+        <section class="map">
+            <h2>Find Us</h2>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.83543450942!2d144.95373531531696!3d-37.81627977975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218cee40!2sMelbourne%20Central%20Shopping%20Centre!5e0!3m2!1sen!2sus!4v1605241290595!5m2!1sen!2sus"
+                style="width:100%; height:300px; border:0;" allowfullscreen="" loading="lazy" title="Our Location Map">
+            </iframe>
+        </section>
 
-                <label for="message">Your Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
+        <!-- Contact Form -->
+        <section class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="submit-form.php" method="POST">
+                <fieldset>
+                    <legend>Your Information</legend>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required aria-required="true" autocomplete="name">
 
-                <label for="newsletter">
-                    <input type="checkbox" id="newsletter" name="newsletter">
-                    Please subscribe me to the monthly newsletter.
-                </label>
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required aria-required="true" autocomplete="email">
 
-                <button type="submit">Send Message</button>
+                    <label for="purpose">Purpose of Message:</label>
+                    <select id="purpose" name="purpose">
+                        <option value="general">General Inquiry</option>
+                        <option value="booking">Booking Request</option>
+                        <option value="support">Support</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+
+                    <div class="checkbox-container">
+                        <input type="checkbox" name="newsletter" id="newsletter">
+                        <label for="newsletter">Subscribe to our newsletter</label>
+                    </div>
+
+                    <button type="submit">Send Message</button>
+                </fieldset>
             </form>
         </section>
-        <section>
-            <h2>Find Us on the Map</h2>
-            <div class="google-map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.27992573675!2d-74.259867!3d40.6976701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ2JzUyLjAiTiA3NMKwMTYnMjUuOCJX"
-                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+        <!-- Employee Section -->
+        <section class="employees">
+            <h2>Meet Our Team</h2>
+            <div class="employee-grid">
+                <figure>
+                    <img src="images/employee1.jpeg" alt="Achen Joan - Tour Guide smiling in rafting gear">
+                    <figcaption>Kevin Okumu - Tour Guide</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/employee2.jpg" alt="Akello Prisca - Safety Instructor demonstrating equipment">
+                    <figcaption>Otim Kenneth - Safety Instructor</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/employee3.jpeg" alt="Watumba Jacob - Customer Support with headset">
+                    <figcaption>Nimaro Sovereign - Customer Support</figcaption>
+                </figure>
             </div>
         </section>
     </main>
+
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2025 Whitewater Rafting | Achen Joyce</p>
-        <div class="social-links">
-            <a href="https://facebook.com"><img src="images/9034971_logo_facebook_icon.png" alt="Facebook"></a>
-            <a href="https://twitter.com"><img src="images/5279123_tweet_twitter_twitter logo_icon.png" alt="Twitter"></a>
-            <a href="https://instagram.com"><img src="images/5279112_camera_instagram_social media_instagram logo_icon.png" alt="Instagram"></a>
-        </div>
-        <p><a href="https://www.moqups.com" target="_blank">View Wireframe</a></p>
+        <p>&copy; 2025 White Water Rafting | 
+            <a href="https://app.moqups.com/SA4iZxNacAmyO3nQdTwrjfu3g8XqW5CV/view/page/ad64222d5" target="_blank" rel="noopener noreferrer">
+                View Wireframe
+            </a>
+        </p>
+        <div class="social-icons">
+            <a href="#" aria-label="Visit our Facebook page"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Check our Instagram profile"><i class="fab fa-instagram"></i></a>
+        </div>   
     </footer>
+
 </body>
 </html>
