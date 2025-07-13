@@ -58,8 +58,8 @@ WDD130/
 - Microsoft Edge
 
 ## 📧 Contact Information
-- **Name:** Kinyera Alvine
-- **Email:** alvinekinyera@gmail.com
+- **Name:** Joyce Achen
+- **Email:** joyceachen1010@gmail.com
 
 ## 🤝 Contribution
 Suggestions and improvements are welcome!
